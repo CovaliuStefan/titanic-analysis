@@ -1,26 +1,25 @@
 import pandas as pd
 
-# Citirea datelor din fisierul train.csv
+# citim datele din train.csv
 df = pd.read_csv('train.csv')
 
-# Determinarea numărului de coloane
-numar_coloane = len(df.columns)
+# determinam numarul de coloane
+numarColoane = len(df.columns)
 
-# Determinarea tipurilor de date pentru fiecare coloană
-tipuri_date = df.dtypes
+# determinam tipurile de date pentru fiecare coloana
+tipuriDeDate = df.dtypes
 
-# Determinarea numărului de valori lipsă pentru fiecare coloană
-valori_lipse = df.isnull().sum()
+# determinam numarul de valori lipsa pentru fiecare coloana
+valoriLipsa = df.isnull().sum()
 
-# Determinarea numărului de linii
-numar_linii = len(df)
+# determinam numarul de linii
+nrLinii = len(df)
 
-# Verificarea liniilor duplicate
-linii_duplicate = df.duplicated().sum()
+# verific daca exista linii duplicate
+duplicate = df.duplicated().sum()
 
-# Afisarea rezultatelor
-print(f'Numărul de coloane: {numar_coloane}')
-print(f'Tipurile de date pentru fiecare coloană:\n{tipuri_date}')
-print(f'Numărul de valori lipsă pentru fiecare coloană:\n{valori_lipse}')
-print(f'Numărul de linii: {numar_linii}')
-print(f'Numărul de linii duplicate: {linii_duplicate}')
+print(f'Numarul de coloane: {numarColoane}')
+print(f'Tipurile de date pentru fiecare colaona:\n{tipuriDeDate}')
+print(f'Numarul de valori lipsa pentru fiecare coloana:\n{valoriLipsa}')
+print(f'Numarul de linii: {nrLinii}')
+print(f'Numarul de linii duplicate: {duplicate}')
